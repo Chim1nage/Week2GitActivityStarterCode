@@ -1,0 +1,43 @@
+Member A:
+git branch subtract-operation 
+git checkout subtract-operation
+git add src
+git commit -m "add subtract operation"
+git push --set-upstream origin subtract-operation
+git checkout main
+git branch multiply-operation
+git checkout multiply-operation 
+git add src
+git commit -m "implement multiply operation"
+git push --set-upstream origin multiply-operation
+git checkout main
+git pull
+git add src/index.ts
+git commit -m "print message when done"
+git push
+git pull
+git merge origin/hello
+git add src/index.ts
+git commit -m "merge the changes"
+
+Member B:
+git checkout main
+git branch divide-operation
+git checkout divide-operation
+git add src
+git commit -m "implement divide operation"
+git checkout main
+git pull
+git checkout divide-operation
+git rebase main
+git add src/calculator.ts src/index.ts
+git rebase --continue
+git push --set-upstream origin divide-operation
+git checkout main
+git branch hello
+git checkout hello
+git add src/calculator.ts src/index.ts
+git commit -m "print hello message"
+git push --set-upstream origin hello
+git checkout main
+git pull
