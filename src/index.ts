@@ -14,3 +14,4 @@ console.log(`result_sub = ${result_sub}`);
 
 const result_div = calc.divide(9, 3);
 console.log(`result_div = ${result_div}`);
+console.log('done.')
